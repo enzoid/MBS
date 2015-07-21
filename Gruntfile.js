@@ -162,7 +162,7 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= pkg.name %>.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
-        src: 'less/bootstrap.less',
+        src: 'less/app.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       compileTheme: {
@@ -528,4 +528,6 @@ module.exports = function (grunt) {
       done();
     });
   });
+  //grunt.loadNpmTasks('grunt-livereload');grunt dist
+
 };
