@@ -3305,6 +3305,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 body {
   background: none;
+  /*background: #fff url(../images/paisley.png) repeat;*/
 }
 .navbar-nav,
 #main-nav {
