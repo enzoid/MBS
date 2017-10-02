@@ -7,11 +7,13 @@
 	list-style: none;
 }
 html {
+	font-size: 10px;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 body {
+	font-size: 18px;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -114,50 +116,91 @@ body {
 	padding: 0;
 }
 .nav {
-	border: solid 1px #c4c4c4;
-	border-width: 1px 0;
-	margin: 0;
+	border: dashed 1px #c4c4c4;
+	border-width: 1px 0 0;
+	border-width: 0;
+	margin: 10px 0;
 	padding: 0;
 }
-.nav a, .nav a:visited {
-	border: dashed 1px #d4d4d4;
-	border-width: 1px 0;
+.nav-link {
+	border: dashed 1px #c4c4c4;
+	border-width: 1px 0 0;
 	display: block;
 	color: #036;
 	padding: 8px 12px;
 	text-decoration: none;
+	font-weight: 800;
 }
-.nav a:hover, .nav a:focus {
-	background-color: #eee;
+.nav-link.active {
+	background-color: #e3e4e5;
 	border: dashed 1px #b4b4b4;
-	border-width: 1px 0;
+	border-width: 1px 0 0;
 	color: #a00;
 	text-decoration: none;
 }
-.nav li:first-child a {
+.nav li:first-child .nav-link {
 	border-top-color: transparent;
 	padding-top: 8px;
 }
-.nav li:last-child a {
+.nav li:last-child .nav-link {
 	border-bottom-color: transparent;
 	padding-bottom: 12px;
 }
-.nav .active {
+
+.navbar-toggle {
+	background-color: transparent;
+	border: solid 1px #fff;
+	border-radius: 6px;
+	color: #fff;
+	margin: 0;
+	position: absolute;
+	top: 24px;
+	right: 1em;
+	height: 4rem;
+	font-size: 1.6rem;
+}
+.icon-bar {
 	background-color: #fff;
-	border: dotted 1px #d4d4d4;
-	border-width: 1px 0;
 }
 .contact {
-	margin: 30px 0 0 2rem;
+	border: dashed 1px #c4c4c4;
+	border-width: 1px 0;
+	color: #fff;
+	margin: 20px 0;
 	padding: 10px 0;
+	background-color: rgba(172,35,25,.95);
+	border: none;
+	/* responsive */
+	margin: 0 -15px;
+	padding: 20px;
 }
-.contact p {
-	padding-left: 44px;
+.half {
+	display: inline-block;
+	line-height: 1.5;
+	padding: 0;
 	position: relative;
+	text-align: left;
+	padding-left: .5em;
+	width: 49%;
+	font-size: 16px;
+	margin: 0;
+}
+
+.half:first-child {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 1em;
 }
 .contact img {
 	position: absolute;
-	left: 12px;
+	left: 16px;
+}
+.contact a,
+.contact a:hover {
+	color: #fff;
+}
+.contact a:hover {
+	text-decoration: underline;
 }
 a {
 	color: #036;
@@ -176,7 +219,7 @@ h1, h2, h3, h4 {
 h1 {
 	display: block;
 	width: auto;
-	text-align: center;
+	text-align: left;
 	margin: 0;
 	padding: 22px 0 0;
 	color: #fff;
@@ -185,13 +228,24 @@ h1 {
 	filter: dropshadow(color=#666666, offx=1, offy=1);
 }
 h2, .h2 {
-	border-bottom: dashed 1px #b4b4b4;
-	color: #AC2319;
+	border-width: 0;
+	background-color: #AC2319;
+	color: #fff;
 	font-size: 30px;
 	font-weight:  400;
 	margin: 0 0 24px;
  padding: 12px .625rem 18px;
+ text-align: center;
 }
+
+#intro .feature-body {
+	padding-top: 20px;
+}
+
+#intro h2 {
+	display: none;
+}
+
 table tr:first-child h3 {
 	margin-top: 0;
 }
@@ -210,20 +264,45 @@ iframe {
 }
 .img-link {
 	float: right;
-	padding: 0 20px 35px 35px;
+	padding: 0 10px 10px 10px;
+	width: 20%;
+	min-width: 80px;
+}
+
+.img-link>img {
+	width: 100%;
+	height: auto;
 }
 /* tables */
 
 table {
  margin: 0 .625rem 20px;
+ width: 100%;
 }
+table tr>td,
+table tr>th {
+	border-bottom: dashed 1px #c4c4c4;
+	padding: 4px 1.5em 4px 0;
+}
+table tr:first-child>td,
+table tr:first-child>th {
+	border-top: dashed 1px #c4c4c4;
+}
+tr>td:nth-child(3) {
+	width: 10%;
+}
+
+tr>td:nth-child(2) {
+	width: 30%;
+}
+
 h3, .h3, th {
 	color: #434343;
 	font: 20px 'Open sans', sans-serif;
 	font-weight: 600;
 	text-align: left;
 	margin-bottom: 10px;
-	width: 70%;
+	width: auto%;
 }
 td {
 	vertical-align: bottom;
@@ -241,14 +320,56 @@ td p {
 	position: relative;
 	top: 2px;
 }
+
 /* sticky nav */
 .fixed {
 	position: static;
 	width: auto;
 }
 
+#back-to-top {
+	display: none;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-weight: 800;
+}
+
 /* media queries */
+@media (min-width:472px) {
+	h1 {
+		font-size: 36px;
+		text-align: center;
+	}
+
+	.half {
+		font-size: 18px;
+	}
+}
 @media (min-width: 768px) {
+	body {
+		font-size: 16px;
+	}
+	table {
+		width: 100%;
+	}
+	table tr>td,
+	table tr>th {
+		border-width: 0;
+	}
+	table tr:first-child>td,
+	table tr:first-child>th {
+		border-width: 0;
+	}
+
+	tr>td:nth-child(3) {
+		width: 10%;
+	}
+
+	tr>td:nth-child(2) {
+		width: 25%;
+	}
+
  .lhs {
  float:  left;
  padding-top: 85px;
@@ -266,7 +387,8 @@ td p {
 }
  .fixed {
  position: fixed;
- width: 196px;
+ top: 0;
+ width: 180px;
 }
  .img-wrapper {
  display: block;
@@ -274,23 +396,52 @@ td p {
  #intro {
  margin-top: 40px;
 }
+
+#intro h2 {
+	display: block;
+}
+
+#intro .feature-body {
+	padding-top: 0;
+}
+
  h1 {
  padding-top: 30px;
- font-size: 32px;
 }
- h2 {
-padding: 12px 0 18px;
+ h2, .h2 {
+	 background-color: transparent;
+	 color: #AC2319;
+	 padding: 12px 0 18px;
+	 border: dashed 1px #b4b4b4;
+	 border-width: 1px 0;
+	 text-align: left;
 }
+
+.navbar-nav.nav {
+	border-width: 1px 0;
+	float: none;
+}
+
+.navbar-nav.nav>li {
+	float: none;
+}
+
 .contact {
-margin: 30px 0 0;
+background-color: rgba(172,35,25,.95);
+border: none;
+color: #fff;
+margin: 20px 0;
 }
- .contact p {
- padding: 0 0 0 22px;
+ .half {
+ float: none;
 font-size: 13px;
+padding: 8px 16px;
+width: auto;
 }
  .contact img {
  left: 0;
 }
+
  .feature-body {
  padding: 0 30px 0 30px;
 }
@@ -300,23 +451,64 @@ padding: 20px 20px 10px;
  table {
 margin: 0 0 20px;
 }
+
+.half,
+.half:first-child {
+	display: block;
+	line-height: 1.5;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	padding-left: 0;
+	width: auto;
+	font-size: 16px;
+	margin: 0;
+}
+
+.half:first-child {
+	margin-bottom: 1rem;
+}
+
+.rhs > div:last-child {
+	margin-bottom: 80vh;
+}
+
+
  @media (min-width: 992px) {
  .container {
  width: 970px;
 }
  .fixed {
- width: 242px;
+ width: 235px;
+ top: 0;
 }
+
  h1 {
  font-size: 48px;
  padding-top: 18px;
 }
- .contact p {
- padding: 0 0 0 44px;
-font-size: 16px;
+ .half {
+font-size: 15px;
 }
- .contact img {
+
+.half,
+.half:first-child {
+	padding-left: 0;
+}
+
+.contact {
+	margin: 20px;
+}
+
+.contact img {
  left: 12px;
+}
+tr>td:nth-child(3) {
+	width: 10%;
+}
+
+tr>td:nth-child(2) {
+	width: 20%;
 }
 }
  @media (min-width: 1200px) {
@@ -324,6 +516,6 @@ font-size: 16px;
  width: 1170px;
 }
  .fixed {
- width: 292px;
+ width: 285px;
 }
 }

@@ -7,56 +7,56 @@
   <title>Marg's Beauty Spot | Thalgo facials and Brazilian waxing in Heathcote Valley, Christchurch</title>
   <meta name="description" content="Visit Marg's Beauty Spot in Heathcote Valley for Thalgo facials, Brazilian and general waxing">
   <meta name="keywords" content="Brazilian wax, Brazilian waxing, Thalgo, Thalgo facial, beauty therapy, beauty salon, beauty salons, beauty salons Christchurch, Bikini wax, leg wax, Christchurch, Heathcote">
-
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   <link rel="icon" href="images/mbs.ico">
   <link rel="alternate" href="http://www.margsbeautyspot.co.nz" hreflang="en" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <link href="css/mbs.css?v=10032016" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="scripts/mbs.js" type="text/javascript"></script>
+  <link href="css/mbs.css?v=14022017v6" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-  <a name="top"></a>
-  <div class="wrapper header">
+  <div id=#top class="wrapper header">
     <div id="header" class="container">
       <div class="img-wrapper">
         <img src="images/marg-watson.jpg" alt="Marg Watson">
       </div>
       <h1>Marg's Beauty Spot</h1>
+      <button aria-controls="mbs-navbar" aria-expanded="true" class="navbar-toggle" data-target="#mbs-navbar" data-toggle="collapse" type="button">
+        menu
+      </button>
     </div>
   </div>
   <div class="wrapper body">
     <div class="container">
       <div class="lhs">
-        <div class="controls">
-          <ul class="nav">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#facials">Thalgo Facials</a></li>
-            <li><a href="#waxing">Waxing</a></li>
-            <li><a href="#mensWaxing">Men's waxing</a></li>
-            <li><a href="#eyesLips">Eyes &amp; lips</a></li>
-            <li><a href="#manicurePedicare">Manicure &amp; pedicare</a></li>
-          </ul>
+        <div class="fix-container">
+          <div class="controls navbar-collapse collapse" id="mbs-navbar">
+            <ul class="nav navbar-nav" role="navbar">
+              <li><a class="nav-link" href="#top">Home</a></li>
+              <li><a class="nav-link" href="#facials">Thalgo Facials</a></li>
+              <li><a class="nav-link" href="#waxing">Waxing</a></li>
+              <li><a class="nav-link" href="#mensWaxing">Men's waxing</a></li>
+              <li><a class="nav-link" href="#eyesLips">Eyes &amp; lips</a></li>
+              <li><a class="nav-link" href="#manicurePedicare">Manicure &amp; pedicare</a></li>
+            </ul>
+          </div>
           <div class="contact">
-            <p>
-              <img src="images/svg-glyph-feet.svg" class="svg-icon"> <span class="mbs">Marg's Beauty Spot</span><br>
-              34 Martindales Road<br>
+            <div class="half">
+              34 Martindales Rd<br>
               Heathcote Valley<br>
               Christchurch 8022
-            </p>
-            <p>
-              <img src="images/svg-glyph-phone.svg" class="svg-icon"> 03-384-8767
-            </p>
-            <p>
-              <img src="images/svg-glyph-mobile.svg" class="svg-icon"> 027-464-7477
-            </p>
-            <p>
-              <img src="images/svg-glyph-mail.svg" class="svg-icon"> <a href="mailto:marg007@xtra.co.nz" title="marg007@xtra.co.nz">Email me</a>
-            </p>
+            </div>
+            <div class="half">03 384 8767
+              <br>027 464 7477
+              <br><a href="mailto:marg007@xtra.co.nz" title="marg007@xtra.co.nz">Email me</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="rhs">
-        <div id="intro">
+        <div id="intro" class="section">
           <div class="feature-body">
             <h2>Hi, I'm Marg</h2>
             <p>
@@ -76,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div id="facials">
+        <div id="facials" class="section">
           <div class="feature-body">
             <h2>Thalgo Facials</h2>
             <p>Rediscover the treasures of marine beauty care.</p>
@@ -183,7 +183,7 @@
             </table>
           </div>
         </div>
-        <div id="waxing">
+        <div id="waxing" class="section">
           <div class="feature-body">
             <h2>Waxing</h2>
             <p class="summary">
@@ -284,7 +284,7 @@
             </table>
           </div>
         </div>
-        <div id="mensWaxing">
+        <div id="mensWaxing" class="section">
           <div class="feature-body">
             <h2>Men's Waxing</h2>
             <table>
@@ -308,7 +308,7 @@
             </table>
           </div>
         </div>
-        <div id="eyesLips">
+        <div id="eyesLips" class="section">
           <div class="feature-body">
             <h2>Eyes &amp; lips</h2>
             <table>
@@ -357,7 +357,7 @@
             </table>
           </div>
         </div>
-        <div id="manicurePedicare">
+        <div id="manicurePedicare" class="section">
           <div class="feature-body">
             <h2>Manicure &amp; pedicare</h2>
             <table>
@@ -397,7 +397,7 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="scripts/mbs.js"></script>
+  <!-- Analytics -->
   <script src="scripts/ga.js" async="" type="text/javascript"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
