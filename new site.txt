@@ -1,0 +1,20 @@
+new site structure
+
+services: current main site rganised into areas
+- thalgo facials
+- waxing
+  - mens waxing
+- eyes and lips
+- manicue and pedicare
+
+testimonials: collected testimonials with tagged view
+(includes ability to write e testimonial. testimonials are curated)  
+
+margsbeautyspiel: quarterly html version of email out
+('marg on the spot')
+
+contact us - email, name, blurb
+
+terms of services
+(disclaimer, use of cookies, cancelled appointments)
+
